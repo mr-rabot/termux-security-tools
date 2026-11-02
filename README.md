@@ -47,3 +47,23 @@ sudo chmod +x /usr/local/bin/my-tools /usr/local/bin/anonsurf
 
 ## ?????? Disclaimer
 For educational purposes only. Use responsibly and legally.
+
+### `deep-recover.py`
+Forensic file carving tool for deep data recovery from disk images and memory dumps.
+
+**Features:**
+- Scans raw binary data for file signatures (magic bytes)
+- Recovers deleted files: JPG, PNG, PDF, ZIP
+- Works on disk images, partitions, and memory dumps
+- Bypasses file system to find hidden data
+
+**Usage:**
+```bash
+# Scan for all file types
+deep-recover disk_image.img -o ./recovered
+
+# Scan for specific type
+deep-recover memory_dump.dmp -t jpg -o ./found_files
+```
+
+**Supported file types:** jpg, png, pdf, zip
